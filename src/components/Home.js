@@ -21,27 +21,6 @@ const Home = () => {
         <h2>Our Mission</h2>
         <p>Promoting sustainable water use and innovative technologies.</p>
 
-        <div>
-          <label>
-            <input
-              type="radio"
-              value="monthly"
-              checked={storageOption === "monthly"}
-              onChange={() => setStorageOption("monthly")}
-            />
-            Monthly Storage
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="datewise"
-              checked={storageOption === "datewise"}
-              onChange={() => setStorageOption("datewise")}
-            />
-            Datewise Storage
-          </label>
-        </div>
-
         <button id="button" onClick={handleExploreClick}>
           Explore
         </button>

@@ -15,14 +15,11 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        {/* Main Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/map" element={<Map />} />
         <Route path="/analytics" element={<AnalyticsPage />} />
-
-        {/* Time Simulation and Forecast Routes */}
         <Route path="/TimeSimulation" element={<TimeSimulation />} />
         <Route path="/yearly-forecast/:year" element={<YearlyForecastPage />} />
         <Route path="/datewise-forecast/:selectedDate" element={<DatewiseForecastPage />} />
