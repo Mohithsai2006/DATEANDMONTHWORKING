@@ -1,24 +1,31 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import TimeSimulation from "./components/TimeSimulation";
+import YearlyForecastPage from "./components/YearlyForecastPage";
+import DatewiseForecastPage from "./components/DatewiseForecastPage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Map from "./components/Map";
-import Home from "./components/Home";
 import AnalyticsPage from "./components/AnalyticsPage";
-import TimeSimulation from "./components/TimeSimulation";
 
 const App = () => {
-  return ( 
+  return (
     <Router>
       <Navbar />
       <Routes>
+        {/* Main Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/map" element={<Map />} />
+        <Route path="/analytics" element={<AnalyticsPage />} />
+
+        {/* Time Simulation and Forecast Routes */}
         <Route path="/TimeSimulation" element={<TimeSimulation />} />
-        <Route path="/Analytics" element={<AnalyticsPage />} />
+        <Route path="/yearly-forecast/:year" element={<YearlyForecastPage />} />
+        <Route path="/datewise-forecast/:selectedDate" element={<DatewiseForecastPage />} />
       </Routes>
     </Router>
   );
